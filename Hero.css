@@ -15,14 +15,14 @@
 .hero-title {
   font-size: 48px;
   font-weight: 800;
-  color: #1a1a2e;
+  color: #fff;
   line-height: 1.1;
   margin: 0 0 24px;
 }
 
 .hero-subtitle {
   font-size: 18px;
-  color: #555;
+  color: rgba(255, 255, 255, 0.85);
   line-height: 1.6;
   margin: 0 0 32px;
 }

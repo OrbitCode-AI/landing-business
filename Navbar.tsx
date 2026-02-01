@@ -9,7 +9,6 @@ interface NavbarProps {
 const defaultLinks = [
   { label: 'Services', href: '#services' },
   { label: 'About', href: '#about' },
-  { label: 'Contact', href: '#contact' },
 ];
 
 function Navbar({ logo = 'Business Name', links = defaultLinks }: NavbarProps) {
@@ -50,9 +49,6 @@ export default function NavbarPreview() {
   return (
     <div className="preview-container">
       <Navbar />
-      <div style={{ marginTop: 80 }}>
-        <Navbar logo="Custom Logo" links={[{ label: 'Home', href: '#' }]} />
-      </div>
     </div>
   );
 }
