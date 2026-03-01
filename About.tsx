@@ -1,20 +1,20 @@
-import './About.css';
+import './About.css'
 
 interface AboutProps {
-  title?: string;
-  description?: string;
-  stats?: { value: string; label: string }[];
+  title?: string
+  description?: string
+  stats?: { value: string; label: string }[]
 }
 
 const defaultStats = [
   { value: '10+', label: 'Years Experience' },
   { value: '500+', label: 'Happy Customers' },
   { value: '100%', label: 'Satisfaction' },
-];
+]
 
 function About({
   title = 'About Our Business',
-  description = 'We\'ve been serving our community for over a decade, building lasting relationships with our customers through quality work and honest service. Our team of experienced professionals is dedicated to exceeding your expectations on every project.',
+  description = "We've been serving our community for over a decade, building lasting relationships with our customers through quality work and honest service. Our team of experienced professionals is dedicated to exceeding your expectations on every project.",
   stats = defaultStats,
 }: AboutProps) {
   return (
@@ -40,7 +40,7 @@ function About({
         </div>
       </div>
     </section>
-  );
+  )
 }
 
 // Default export renders component in isolation for preview
@@ -49,7 +49,7 @@ export default function AboutPreview() {
     <div className="preview-container">
       <About />
     </div>
-  );
+  )
 }
 
-export { About };
+export { About }

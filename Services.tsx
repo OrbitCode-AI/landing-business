@@ -1,9 +1,9 @@
-import './Services.css';
+import './Services.css'
 
 interface Service {
-  icon: string;
-  title: string;
-  description: string;
+  icon: string
+  title: string
+  description: string
 }
 
 const defaultServices: Service[] = [
@@ -22,10 +22,10 @@ const defaultServices: Service[] = [
     title: 'Service Three',
     description: 'Reliable and trustworthy work backed by our satisfaction guarantee.',
   },
-];
+]
 
 interface ServiceCardProps {
-  service: Service;
+  service: Service
 }
 
 function ServiceCard({ service }: ServiceCardProps) {
@@ -35,12 +35,12 @@ function ServiceCard({ service }: ServiceCardProps) {
       <h3 className="service-title">{service.title}</h3>
       <p className="service-description">{service.description}</p>
     </div>
-  );
+  )
 }
 
 interface ServicesProps {
-  title?: string;
-  services?: Service[];
+  title?: string
+  services?: Service[]
 }
 
 function Services({ title = 'Our Services', services = defaultServices }: ServicesProps) {
@@ -55,7 +55,7 @@ function Services({ title = 'Our Services', services = defaultServices }: Servic
         </div>
       </div>
     </section>
-  );
+  )
 }
 
 // Default export renders component in isolation for preview
@@ -68,8 +68,8 @@ export default function ServicesPreview() {
         <ServiceCard service={defaultServices[0]} />
       </div>
     </div>
-  );
+  )
 }
 
-export { Services, ServiceCard };
-export type { Service };
+export { Services, ServiceCard }
+export type { Service }

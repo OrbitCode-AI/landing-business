@@ -1,35 +1,35 @@
-import { useVar } from 'orbitcode';
-import './Contact.css';
+import { useVar } from 'orbitcode'
+import './Contact.css'
 
 interface ContactInfo {
-  icon: string;
-  label: string;
-  value: string;
+  icon: string
+  label: string
+  value: string
 }
 
 const defaultContactInfo: ContactInfo[] = [
   { icon: '📍', label: 'Address', value: '123 Main Street, City, ST 12345' },
   { icon: '📞', label: 'Phone', value: '(555) 123-4567' },
   { icon: '✉️', label: 'Email', value: 'info@business.com' },
-];
+]
 
 interface ContactProps {
-  title?: string;
-  contactInfo?: ContactInfo[];
+  title?: string
+  contactInfo?: ContactInfo[]
 }
 
 function Contact({ title = 'Get in Touch', contactInfo = defaultContactInfo }: ContactProps) {
-  const [name, setName] = useVar('contactName', '');
-  const [email, setEmail] = useVar('contactEmail', '');
-  const [message, setMessage] = useVar('contactMessage', '');
+  const [name, setName] = useVar('contactName', '')
+  const [email, setEmail] = useVar('contactEmail', '')
+  const [message, setMessage] = useVar('contactMessage', '')
 
   const handleSubmit = (e: Event) => {
-    e.preventDefault();
-    alert(`Thanks ${name}! We'll be in touch soon.`);
-    setName('');
-    setEmail('');
-    setMessage('');
-  };
+    e.preventDefault()
+    alert(`Thanks ${name}! We'll be in touch soon.`)
+    setName('')
+    setEmail('')
+    setMessage('')
+  }
 
   return (
     <section id="contact" className="contact">
@@ -56,28 +56,28 @@ function Contact({ title = 'Get in Touch', contactInfo = defaultContactInfo }: C
             type="text"
             placeholder="Your Name"
             value={name}
-            onInput={(e) => setName((e.target as HTMLInputElement).value)}
+            onInput={e => setName((e.target as HTMLInputElement).value)}
             required
           />
           <input
             type="email"
             placeholder="Your Email"
             value={email}
-            onInput={(e) => setEmail((e.target as HTMLInputElement).value)}
+            onInput={e => setEmail((e.target as HTMLInputElement).value)}
             required
           />
           <textarea
             placeholder="Your Message"
             rows={5}
             value={message}
-            onInput={(e) => setMessage((e.target as HTMLTextAreaElement).value)}
+            onInput={e => setMessage((e.target as HTMLTextAreaElement).value)}
             required
           />
           <button type="submit">Send Message</button>
         </form>
       </div>
     </section>
-  );
+  )
 }
 
 // Default export renders component in isolation for preview
@@ -86,7 +86,7 @@ export default function ContactPreview() {
     <div className="preview-container">
       <Contact />
     </div>
-  );
+  )
 }
 
-export { Contact };
+export { Contact }

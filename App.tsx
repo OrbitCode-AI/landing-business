@@ -1,10 +1,10 @@
-import Navbar from './Navbar';
-import Hero from './Hero';
-import Services from './Services';
-import About from './About';
-import Contact from './Contact';
-import Footer from './Footer';
-import './styles.css';
+import Navbar from './Navbar'
+import Hero from './Hero'
+import Services from './Services'
+import About from './About'
+import Contact from './Contact'
+import Footer from './Footer'
+import './styles.css'
 
 export default function App() {
   return (
@@ -16,5 +16,5 @@ export default function App() {
       <Contact />
       <Footer />
     </div>
-  );
+  )
 }

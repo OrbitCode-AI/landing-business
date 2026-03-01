@@ -1,10 +1,10 @@
-import './Hero.css';
+import './Hero.css'
 
 interface HeroProps {
-  title?: string;
-  subtitle?: string;
-  ctaText?: string;
-  ctaHref?: string;
+  title?: string
+  subtitle?: string
+  ctaText?: string
+  ctaHref?: string
 }
 
 function Hero({
@@ -19,8 +19,12 @@ function Hero({
         <h1 className="hero-title">{title}</h1>
         <p className="hero-subtitle">{subtitle}</p>
         <div className="hero-actions">
-          <a href={ctaHref} className="hero-cta">{ctaText}</a>
-          <a href="#services" className="hero-secondary">Learn More</a>
+          <a href={ctaHref} className="hero-cta">
+            {ctaText}
+          </a>
+          <a href="#services" className="hero-secondary">
+            Learn More
+          </a>
         </div>
       </div>
       <div className="hero-image">
@@ -30,7 +34,7 @@ function Hero({
         </div>
       </div>
     </section>
-  );
+  )
 }
 
 // Default export renders component in isolation for preview
@@ -39,7 +43,7 @@ export default function HeroPreview() {
     <div className="preview-container">
       <Hero />
     </div>
-  );
+  )
 }
 
-export { Hero };
+export { Hero }
